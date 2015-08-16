@@ -106,7 +106,7 @@ var b = $.isScrollToFixed('.header');
 
   $('.header').trigger('resize'); // Resizes the spacer in case the fixed element height changes.
                                   // Good for size changes to the fixed element.
-  
+
   $(window).scroll(); // Causes the plugin to recalculate the window scoll.
                       // Good for layout changes that could change the fixed element's response to
                       // the scroll.  Example: the fixed element height expands which should cause
@@ -114,8 +114,8 @@ var b = $.isScrollToFixed('.header');
 
   $(window).resize(); // Causes the plugin to recalculate the element offsets, then the window scroll.
                       // Good for layout changes that could cause the fixed element to move.
-                      // Example: the header height increases which should cause the fixed 
-                      // element to fix at a greater vertical scroll position.  
+                      // Example: the header height increases which should cause the fixed
+                      // element to fix at a greater vertical scroll position.
 ```
 
 ## Options ##
@@ -135,8 +135,10 @@ var b = $.isScrollToFixed('.header');
 * __postAbsolute__ - the function handler triggered just after the element leaves absolute.
 * __offsets__ - (true|false|not present) some websites have needed an adjustment to the left position of the element due to something in their layout.  This option turns this adjustment on.
 * __minWidth__ (number) - the minimum width the window must be to "fix" the target element.  Turns off the functionaility when the window width is less than specified.
+* __maxWidth__ (number) - the maximum width the window must be to "fix" the target element.  Turns off the functionaility when the window width is more than specified.
 * __dontCheckForPositionFixedSupport__ - (true|false|not present) some devices do not support position fixed; we check to see if it does.  This option turns off that check if set to true.
 * __dontSetWidth__ - (true|false|not set) box sizing that does not set the width on the target element when it goes fixed or absolute.
+* __removeOffsets__ - (true|false|not set) recalculate top offset and delete left offset when the element goes absolute.
 
 ## Demos ##
 
@@ -145,17 +147,5 @@ var b = $.isScrollToFixed('.header');
 * http://jsfiddle.net/ZczEt/167/ - very full example: fixed header, footer and floating summary, with events.
 * http://jsfiddle.net/y3qV5/435/ - 2 cart summaries that scroll up and stop at different intervals.
 * http://jsfiddle.net/y3qV5/769/ - Another multi-cart example using floats, with section stops.
-* http://jsfiddle.net/ZZYpG/2/   - Endlessly scrolling date markers.
+* http://jsfiddle.net/ZZYpG/68/   - Endlessly scrolling date markers.
 * http://jsfiddle.net/y3qV5/1730/ - Yahoo's new sidebar.
- 
-## Contributors ##
-
-* [bigspotteddog](https://github.com/bigspotteddog)
-* [megamattron](https://github.com/megamattron)
-* [techpeace](https://github.com/techpeace)
-* [jwoldan](https://github.com/jwoldan)
-* [stanislaw](https://github.com/stanislaw)
-* [glench](https://github.com/Glench)
-* [murb](https://github.com/murb)
-* [dukebg](https://github.com/DukeBG)
-
